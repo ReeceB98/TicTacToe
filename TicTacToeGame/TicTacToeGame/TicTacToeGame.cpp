@@ -1,20 +1,52 @@
 // TicTacToeGame.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
 
+void playersTurn();
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    playersTurn();
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+void playersTurn()
+{
+    bool gameOver = false;
+    bool isPlayer1 = true;
+    bool isPlayer2 = false;
+    int turnAmount = 0;
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+    // This will keep looping until game is over
+    while (!gameOver)
+    {
+        // Turn change conditions between player 1 & 2
+        if (isPlayer1)
+        {
+            std::cout << "Turn: Player 1\n";
+            isPlayer1 = false;
+            isPlayer2 = true;
+        }
+        else if (isPlayer2)
+        {
+            std::cout << "Turn: Player 2\n";
+            isPlayer1 = true;
+            isPlayer2 = false;
+        }
+        else
+        {
+            std::cout << "Something went wrong in the turn change!\n";
+        }
+        
+        // Turn amount will increase after every turn taken to end the game.
+        turnAmount++;
+
+        // If the turn amount has reach the max turns end the game.
+        if (turnAmount > 7)
+        {
+            gameOver = true;
+        }
+    }
+}
+
+
+
