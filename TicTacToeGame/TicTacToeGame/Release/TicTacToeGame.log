@@ -1,0 +1,8 @@
+﻿  TicTacToeGame.cpp
+  Generating code
+C:\VisualStudio\TicTacToe\TicTacToeGame\TicTacToeGame\TicTacToeGame.cpp(186): warning C4715: 'tryAgain': not all control paths return a value
+  13 of 104 functions (12.5%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  TicTacToeGame.vcxproj -> C:\VisualStudio\TicTacToe\TicTacToeGame\Release\TicTacToeGame.exe
