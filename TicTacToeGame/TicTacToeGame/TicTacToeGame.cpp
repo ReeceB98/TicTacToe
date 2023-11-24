@@ -9,10 +9,13 @@ void updateGrid(bool isPlayer1, bool isPlayer2, char playersChoice);
 void player1Choice(bool player1, char choice);
 void player2Choice(bool player1, char choice);
 //char tryAgain(std::vector<char> gridNum, char choice);
+bool winCondition(std::vector<char> gridNum);
 
 int main()
 {
     playersTurn();
+
+    return 0;
 }
 
 void playersTurn()
@@ -61,6 +64,11 @@ void playersTurn()
         {
             gameOver = true;
         }
+
+        if (winCondition(gridNum))
+        {
+            break;
+        }
     }
 }
 
@@ -96,6 +104,15 @@ void updateGrid(bool isPlayer1, bool isPlayer2, char playersChoice)
 //        return choice;
 //    }
 //}
+
+bool winCondition(std::vector<char> gridNum)
+{
+    if ((gridNum[0] == 'X') && (gridNum[3] == 'X') && (gridNum[6] == 'X'))
+    {
+        std::cout << "Congratulations Player 1! You have Won!\n";
+        return true;
+    }
+}
 
 void player1Choice(bool player1, char choice)
 {

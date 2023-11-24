@@ -1,2 +1,3 @@
 ﻿  TicTacToeGame.cpp
+C:\VisualStudio\TicTacToe\TicTacToeGame\TicTacToeGame\TicTacToeGame.cpp(117): warning C4715: 'winCondition': not all control paths return a value
   TicTacToeGame.vcxproj -> C:\VisualStudio\TicTacToe\TicTacToeGame\Debug\TicTacToeGame.exe
