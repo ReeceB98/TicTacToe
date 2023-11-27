@@ -60,14 +60,15 @@ void playersTurn()
         turnAmount++;
 
         // If the turn amount has reach the max turns end the game.
-        if (turnAmount > 20)
+        if (turnAmount > 8)
         {
             gameOver = true;
+            std::cout << "It is a draw!\n";
         }
 
         if (winCondition(gridNum))
         {
-            break;
+            gameOver = true;
         }
     }
 }
@@ -107,11 +108,91 @@ void updateGrid(bool isPlayer1, bool isPlayer2, char playersChoice)
 
 bool winCondition(std::vector<char> gridNum)
 {
+    // Conditions for Player 1 to win the game
     if ((gridNum[0] == 'X') && (gridNum[3] == 'X') && (gridNum[6] == 'X'))
     {
         std::cout << "Congratulations Player 1! You have Won!\n";
         return true;
     }
+    else if ((gridNum[2] == 'X') && (gridNum[5] == 'X') && (gridNum[8] == 'X'))
+    {
+        std::cout << "Congratulations Player 1! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[1] == 'X') && (gridNum[4] == 'X') && (gridNum[7] == 'X'))
+    {
+        std::cout << "Congratulations Player 1! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[0] == 'X') && (gridNum[1] == 'X') && (gridNum[2] == 'X'))
+    {
+        std::cout << "Congratulations Player 1! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[3] == 'X') && (gridNum[4] == 'X') && (gridNum[5] == 'X'))
+    {
+        std::cout << "Congratulations Player 1! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[6] == 'X') && (gridNum[7] == 'X') && (gridNum[8] == 'X'))
+    {
+        std::cout << "Congratulations Player 1! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[6] == 'X') && (gridNum[4] == 'X') && (gridNum[2] == 'X'))
+    {
+        std::cout << "Congratulations Player 1! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[0] == 'X') && (gridNum[4] == 'X') && (gridNum[8] == 'X'))
+    {
+        std::cout << "Congratulations Player 1! You have Won!\n";
+        return true;
+    }
+
+    // Conditions for Player 2 to win the game
+    if ((gridNum[0] == 'O') && (gridNum[3] == 'O') && (gridNum[6] == 'O'))
+    {
+        std::cout << "Congratulations Player 2! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[2] == 'O') && (gridNum[5] == 'O') && (gridNum[8] == 'O'))
+    {
+        std::cout << "Congratulations Player 2! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[1] == 'O') && (gridNum[4] == 'O') && (gridNum[7] == 'O'))
+    {
+        std::cout << "Congratulations Player 2! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[0] == 'O') && (gridNum[1] == 'O') && (gridNum[2] == 'O'))
+    {
+        std::cout << "Congratulations Player 2! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[3] == 'O') && (gridNum[4] == 'O') && (gridNum[5] == 'O'))
+    {
+        std::cout << "Congratulations Player 2! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[6] == 'O') && (gridNum[7] == 'O') && (gridNum[8] == 'O'))
+    {
+        std::cout << "Congratulations Player 2! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[6] == 'O') && (gridNum[4] == 'O') && (gridNum[2] == 'O'))
+    {
+        std::cout << "Congratulations Player 2! You have Won!\n";
+        return true;
+    }
+    else if ((gridNum[0] == 'O') && (gridNum[4] == 'O') && (gridNum[8] == 'O'))
+    {
+        std::cout << "Congratulations Player 2! You have Won!\n";
+        return true;
+    }
+
+    return false;
 }
 
 void player1Choice(bool player1, char choice)
